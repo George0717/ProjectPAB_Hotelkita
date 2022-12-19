@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 private RecyclerView rvPahlawan;
-private ArrayList<ModelPahlawan>data = new ArrayList<>();
+private ArrayList<ModelHotel>data = new ArrayList<>();
     @SuppressLint("MissingInflatedId")
     @Override
 
@@ -25,7 +25,7 @@ private ArrayList<ModelPahlawan>data = new ArrayList<>();
 
         rvPahlawan=findViewById(R.id.rv_pahlwn);
         rvPahlawan.setHasFixedSize(true);
-        data.addAll(DataPahlawan.ambilDataPahlawan());
+        data.addAll(DataHotel.ambilDataHotel());
         tampilDataCard();
     }
     private void tampilDataCard(){

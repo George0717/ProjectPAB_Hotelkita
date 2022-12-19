@@ -1,6 +1,6 @@
 package com.if3b.pahlawan;
 
-public class ModelPahlawan {
+public class ModelHotel {
     private String nama;
     private String tentang;
     private String foto;

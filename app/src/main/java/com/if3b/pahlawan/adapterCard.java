@@ -2,7 +2,6 @@ package com.if3b.pahlawan;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.if3b.pahlawan.ModelPahlawan;
-import com.if3b.pahlawan.R;
 
 import java.util.ArrayList;
 
 public class adapterCard extends RecyclerView.Adapter<adapterCard.varViewHolder> {
-    private ArrayList<ModelPahlawan> dataPahlawan;
+    private ArrayList<ModelHotel> dataPahlawan;
     private Context ctx;
 
-    public adapterCard(ArrayList<ModelPahlawan> dataPahlawan, Context ctx) {
+    public adapterCard(ArrayList<ModelHotel> dataPahlawan, Context ctx) {
         this.dataPahlawan = dataPahlawan;
         this.ctx = ctx;
     }
@@ -36,7 +33,7 @@ public class adapterCard extends RecyclerView.Adapter<adapterCard.varViewHolder>
 
     @Override
     public void onBindViewHolder(@NonNull varViewHolder holder, int position) {
-        ModelPahlawan pahlawan = dataPahlawan.get(position);
+        ModelHotel pahlawan = dataPahlawan.get(position);
         holder.tvNama.setText(pahlawan.getNama());
         holder.tvTentang.setText(pahlawan.getTentang());
         Glide

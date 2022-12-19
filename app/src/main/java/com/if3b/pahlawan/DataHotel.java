@@ -3,7 +3,7 @@ package com.if3b.pahlawan;
 import java.util.ArrayList;
 
 public class
-DataPahlawan {
+DataHotel {
     public static String data[][] = new String[][]{
             {"Arya duta Palembang ", "Palembang Square, Jl. POM IX, Lorok Pakjo, Kec. Ilir Bar. I, Kota Palembang, Sumatera Selatan 30137", " https://pix10.agoda.net/hotelImages/149200/-1/526d77aa173404005eb735b9381d1fea.jpg?ca=9&ce=1&s=1024x768","https://ahg-cms.gumlet.io/media/img-38de57d8-d7fe-49b1-9235-a250d633969c.jpg ","https://pix8.agoda.net/hotelImages/149200/-1/c2b7171f506efe51b190cb2adef56395.jpg?ca=0&ce=1&s=1024x768","https://cf.bstatic.com/xdata/images/hotel/max1024x768/141197826.jpg?k=2f705e6fb76e43c901bce0db5277f31218b08d405856aa2ce8f9ed6c438c07e5&o=&hp=1"},
             {"The 101 Palembang","Jl. Rajawali No.18, 9 Ilir, Kec. Ilir Tim. II, Kota Palembang, Sumatera Selatan 30113","https://cf.bstatic.com/xdata/images/hotel/max1024x768/345141525.jpg?k=eb6baef17a5547aa8d9bdea5284e7e71b08374a4f18987e53cf20fde5ad866f0&o=&hp=1 ","https://cf.bstatic.com/xdata/images/hotel/max1024x768/345142635.jpg?k=a82a491ea7390ccee5e35bc6b726dc387482b2aa10b6ec3704a6e751843dfb8d&o=&hp=1","https://cf.bstatic.com/xdata/images/hotel/max1024x768/349256481.jpg?k=cac0a6714da5ff6eafe793effc60a41b927c5c3316898917180d13692e1e633e&o=&hp=1","https://cf.bstatic.com/xdata/images/hotel/max1024x768/345142877.jpg?k=57095b3eef56bff5b2335a63777bffc78f9da100e845f243b44fe0da0c7072e1&o=&hp=1"},
@@ -17,10 +17,10 @@ DataPahlawan {
             {"Wyndham Opi Hotel Palembang "," Komplek Opi Mall, Jl. Gubernur H. A Bastari, Sungai Kedukan, Kec. Rambutan, Kota Palembang, Sumatera Selatan 30967","https://cf.bstatic.com/xdata/images/hotel/max1024x768/154577744.jpg?k=7923a0f30d8a5eb952fae40dc1575a4d13f677b9f8ea89b30e02ac7e8d4199bf&o=&hp=1 ","https://cf.bstatic.com/xdata/images/hotel/max1024x768/138677172.jpg?k=bdfb8ff1fd1bd6ea31fe9a180cd7b50612f669afb82b4d0779e431f8daaa7157&o=&hp=1 ","https://cf.bstatic.com/xdata/images/hotel/max1024x768/159121249.jpg?k=0175be5b3426e279a72dc3b3fe2f2455c63f4a61700ecd3f0a6474bed58ef4ca&o=&hp=1","https://cf.bstatic.com/xdata/images/hotel/max1024x768/159123613.jpg?k=10e4d5ff22ab4d24f929c8175e8c21ec0188d33d620d298bd5943fe26736faa1&o=&hp=1"},
 
     };
-    public static ArrayList<ModelPahlawan> ambilDataPahlawan() {
-        ArrayList<ModelPahlawan> dataPahlawan = new ArrayList<>();
+    public static ArrayList<ModelHotel> ambilDataHotel() {
+        ArrayList<ModelHotel> dataHotel = new ArrayList<>();
         for (String[] varData : data) {
-            ModelPahlawan model = new ModelPahlawan();
+            ModelHotel model = new ModelHotel();
             model.setNama(varData[0]);
             model.setTentang(varData[1]);
             model.setFoto(varData[2]);
@@ -28,9 +28,9 @@ DataPahlawan {
             model.setFoto2(varData[4]);
             model.setFoto3(varData[5]);
 
-            dataPahlawan.add(model);
+            dataHotel.add(model);
         }
 
-        return dataPahlawan;
+        return dataHotel;
     }
 }
