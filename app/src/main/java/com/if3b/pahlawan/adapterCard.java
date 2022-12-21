@@ -16,11 +16,11 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 public class adapterCard extends RecyclerView.Adapter<adapterCard.varViewHolder> {
-    private ArrayList<ModelHotel> dataPahlawan;
+    private ArrayList<ModelHotel> dataHotel;
     private Context ctx;
 
     public adapterCard(ArrayList<ModelHotel> dataPahlawan, Context ctx) {
-        this.dataPahlawan = dataPahlawan;
+        this.dataHotel = dataPahlawan;
         this.ctx = ctx;
     }
 
@@ -33,23 +33,28 @@ public class adapterCard extends RecyclerView.Adapter<adapterCard.varViewHolder>
 
     @Override
     public void onBindViewHolder(@NonNull varViewHolder holder, int position) {
-        ModelHotel pahlawan = dataPahlawan.get(position);
-        holder.tvNama.setText(pahlawan.getNama());
-        holder.tvTentang.setText(pahlawan.getTentang());
+        ModelHotel hotel = dataHotel.get(position);
+        holder.tvNama.setText(hotel.getNama());
+        holder.tvTentang.setText(hotel.getTentang());
         Glide
                 .with(ctx)
-                .load(pahlawan.getFoto())
+                .load(hotel.getFoto())
                 .centerCrop()
                 .into(holder.ivFoto);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String xNama, xTentang, xFoto;
+                String xNama, xTentang, xFoto, xFoto1, xFoto2, xFoto3,xdetail;
 
-                xNama = pahlawan.getNama();
-                xTentang = pahlawan.getTentang();
-                xFoto = pahlawan.getFoto();
+                xNama = hotel.getNama();
+                xTentang = hotel.getTentang();
+                xFoto = hotel.getFoto();
+                xFoto1 = hotel.getFoto1();
+                xFoto2 = hotel.getFoto2();
+                xFoto3 = hotel.getFoto3();
+                xdetail= hotel.getDetail();
+
 
 //                Log.d("CEKNRICEK", xNama+ " | " + xTentang + " | " + xFoto);
 
@@ -57,6 +62,10 @@ public class adapterCard extends RecyclerView.Adapter<adapterCard.varViewHolder>
                 kirim.putExtra("xNama", xNama);
                 kirim.putExtra("xTentang", xTentang);
                 kirim.putExtra("xFoto", xFoto);
+                kirim.putExtra("xFoto1", xFoto1);
+                kirim.putExtra("xFoto2", xFoto2);
+                kirim.putExtra("xFoto3", xFoto3);
+                kirim.putExtra("xDetail", xdetail);
                 ctx.startActivity(kirim);
             }
         });
@@ -65,7 +74,7 @@ public class adapterCard extends RecyclerView.Adapter<adapterCard.varViewHolder>
 
     @Override
     public int getItemCount() {
-        return dataPahlawan.size();
+        return dataHotel.size();
     }
 
     public class varViewHolder extends RecyclerView.ViewHolder {

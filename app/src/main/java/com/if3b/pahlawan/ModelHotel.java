@@ -3,6 +3,7 @@ package com.if3b.pahlawan;
 public class ModelHotel {
     private String nama;
     private String tentang;
+    private String detail;
     private String foto;
     private String foto1;
     private String foto2;
@@ -25,6 +26,10 @@ public class ModelHotel {
     public void setTentang(String tentang) {
         this.tentang = tentang;
     }
+
+    public String getDetail() {return detail;}
+
+    public void setDetail(String detail) {this.detail = detail;}
 
     public String getFoto() {
         return foto;

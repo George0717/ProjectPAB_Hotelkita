@@ -22,28 +22,28 @@
             />
         <ImageView
             android:id="@+id/iv_fot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
             android:src="@mipmap/ic_launcher"
             android:layout_below="@+id/iv_foto"
-            android:paddingRight="5dp"
-            android:layout_marginLeft="235px"/>
+            android:paddingRight="2dp"
+            />
         <ImageView
             android:id="@+id/iv_foto2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
             android:src="@mipmap/ic_launcher"
             android:layout_below="@+id/iv_foto"
             android:layout_toRightOf="@id/iv_fot"
-            android:paddingRight="5dp"/>
+            android:paddingRight="2dp"/>
         <ImageView
             android:id="@+id/iv_foto3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
             android:src="@mipmap/ic_launcher"
             android:layout_below="@+id/iv_foto"
             android:layout_toRightOf="@+id/iv_foto2"
-            android:paddingRight="5dp"/>
+            android:paddingRight="2dp"/>
 
         <TextView
             android:id="@+id/tv_nama"
@@ -51,6 +51,7 @@
             android:layout_height="wrap_content"
             android:text="Nama Hotel"
             android:padding="6dp"
+            android:layout_marginTop="20px"
             style="@style/TextAppearance.AppCompat.Large"
             android:layout_below="@+id/iv_fot"/>
 
@@ -80,10 +81,20 @@
             android:id="@+id/tv_desk_hotel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Isi deskripsi hotel"
+            android:text=""
             android:textSize="15dp"
             android:layout_below="@id/tv_title_about"
             />
+
+        <Button
+            android:id="@+id/btn_lokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_desk_hotel"
+            android:paddingTop="10dp"
+            android:text="Buka Map"
+            android:layout_marginTop="300px"/>
+
 
     </RelativeLayout>
 
