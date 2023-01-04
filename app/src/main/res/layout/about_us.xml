@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_nama1"
+            android:text="Raden George Samuel Budi"
+            android:textSize="20sp"
+            android:layout_marginLeft="6dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_npm1"
+            android:text="2125250066"
+            android:textSize="18sp"
+            android:layout_below="@id/tv_nama1"
+            android:layout_marginLeft="6dp"
+            android:ellipsize="end"
+            android:maxLines="3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_quotes1"
+            android:text="- - - - -"
+            android:textSize="18sp"
+            android:layout_below="@id/tv_npm1"
+            android:layout_marginLeft="6dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_nama2"
+            android:text="Ambrosius Dwi Cahyadi"
+            android:textSize="20sp"
+            android:layout_marginLeft="6dp"
+            android:layout_below="@id/tv_quotes1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_npm2"
+            android:text="2125250041"
+            android:textSize="18sp"
+            android:layout_below="@id/tv_nama2"
+            android:layout_marginLeft="6dp"
+            android:ellipsize="end"
+            android:maxLines="3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_quotes2"
+            android:text="- - - - -"
+            android:textSize="18sp"
+            android:layout_below="@id/tv_npm2"
+            android:layout_marginLeft="6dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_nama3"
+            android:text="Mario Rivaldo"
+            android:textSize="20sp"
+            android:layout_marginLeft="6dp"
+            android:layout_below="@id/tv_quotes2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_npm3"
+            android:text="2125250035"
+            android:textSize="18sp"
+            android:layout_below="@id/tv_nama3"
+            android:layout_marginLeft="6dp"
+            android:ellipsize="end"
+            android:maxLines="3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_quotes3"
+            android:text="- - - - -"
+            android:textSize="18sp"
+            android:layout_below="@id/tv_npm3"
+            android:layout_marginLeft="6dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
