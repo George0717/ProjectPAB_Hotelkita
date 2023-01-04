@@ -9,4 +9,9 @@
             android:id="@+id/menu_modeG"
             android:title="Mode Grid"
             />
+
+        <item
+        android:id="@+id/menu_aboutA"
+        android:title="About Us"
+        />
 </menu>

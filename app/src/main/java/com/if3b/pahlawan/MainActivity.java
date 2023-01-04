@@ -7,22 +7,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    Button btnPindah;
 private RecyclerView rvPahlawan;
 private ArrayList<ModelHotel>data = new ArrayList<>();
     @SuppressLint("MissingInflatedId")
     @Override
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        btnPindah = findViewById(R.id.btn_pindah);
         rvPahlawan=findViewById(R.id.rv_pahlwn);
         rvPahlawan.setHasFixedSize(true);
         data.addAll(DataHotel.ambilDataHotel());
@@ -40,6 +45,10 @@ private ArrayList<ModelHotel>data = new ArrayList<>();
         rvPahlawan.setAdapter(varAdapterGrid);
     }
 
+
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_mode,menu);
@@ -56,8 +65,13 @@ private ArrayList<ModelHotel>data = new ArrayList<>();
             case R.id.menu_modeG:
                 tampilDataGrid();
                 break;
+            case R.id.menu_aboutA:
+                Intent pindah = new Intent(MainActivity.this, aboutUs.class);
+                startActivity(pindah);
+                break;
 
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
