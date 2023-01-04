@@ -59,17 +59,10 @@ private ArrayList<ModelHotel>data = new ArrayList<>();
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.menu_modeC:
-                tampilDataCard();
-                break;
-            case R.id.menu_modeG:
-                tampilDataGrid();
-                break;
             case R.id.menu_aboutA:
                 Intent pindah = new Intent(MainActivity.this, aboutUs.class);
                 startActivity(pindah);
                 break;
-
         }
         return super.onOptionsItemSelected(item);
     }
